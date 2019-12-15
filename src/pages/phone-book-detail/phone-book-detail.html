@@ -1,0 +1,17 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{contact.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div align="center">
+  <ion-avatar item-left>
+    <img src="{{contact.imageUrl}}"  height="300">
+  </ion-avatar><br>
+  <button ion-button color="secondary" round (click)="call()">
+    <ion-icon name="ios-call"></ion-icon>&nbsp; CALL : {{contact.telephone}}
+  </button>
+  </div>
+</ion-content>

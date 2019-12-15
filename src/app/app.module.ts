@@ -8,12 +8,15 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { LoginPage } from '../pages/login/login';
+import { BacodeScannerPage } from '../pages/bacode-scanner/bacode-scanner';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    ListPage
+    HomePage,LoginPage,
+    ListPage,BacodeScannerPage
   ],
   imports: [
     BrowserModule,
@@ -22,11 +25,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    ListPage
+    HomePage,LoginPage,
+    ListPage,BacodeScannerPage
   ],
   providers: [
-    StatusBar,
+    StatusBar, BarcodeScanner,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
